@@ -12,7 +12,9 @@ get_tmux_option() {
 }
 
 find_executable() {
-  if type urlview >/dev/null 2>&1; then
+  if type urlscan >/dev/null 2>&1; then
+    echo "urlscan"
+  elif type urlview >/dev/null 2>&1; then
     echo "urlview"
   elif type extract_url >/dev/null 2>&1; then
     echo "extract_url"
